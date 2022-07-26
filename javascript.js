@@ -35,6 +35,6 @@ function inversion (){
     let gananciaInvertida = ((valorContado*plazoFijo) / cantidadDeCuotas);
     alert(`Ahorraste $ ${gananciaInvertida}  por mes`);
     let gananciaTotal = gananciaInvertida * cantidadDeCuotas
-    alert (`o bien ${gananciaTotal} en los ${cantidadDeCuotas} meses de la financiacion`)
+    alert (`o bien $ ${gananciaTotal} en los ${cantidadDeCuotas} meses de la financiacion`)
 }//CALCULAR QUE HACER CON EL EFECTIVO Y CUANTO LE PODEMOS SACAR EN CASO DE INVERTIRLO EN X CANT DE MESES
 
