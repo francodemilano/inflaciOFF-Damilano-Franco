@@ -1,5 +1,5 @@
 //DATO SIN INTERACCION DEL USUSARIO
-/* let InflacionMensual = 5;
+let InflacionMensual = 5;
 let plazoFijo = 0.45;
 
 alert("CONVIENE COMPRAR DE CONTADO O FINANCIADO? VAMOS A VER...")
@@ -35,8 +35,8 @@ function inversion (){
     let gananciaInvertida = ((valorContado*plazoFijo) / cantidadDeCuotas);
     alert(`Ahorraste $ ${gananciaInvertida}  por mes`);
     let gananciaTotal = gananciaInvertida * cantidadDeCuotas
-    alert (`o bien $ ${gananciaTotal} en los ${cantidadDeCuotas} meses de la financiacion`) */
-//}
+    alert (`o bien $ ${gananciaTotal} en los ${cantidadDeCuotas} meses de la financiacion`)
+}
 //CALCULAR QUE HACER CON EL EFECTIVO Y CUANTO LE PODEMOS SACAR EN CASO DE INVERTIRLO EN X CANT DE MESES
 
 //MODULO DE PROMOCIONES VIGENTES SEGUN TARJETAS DE CREDITO
@@ -51,14 +51,14 @@ class Tarjeta {
         this.categoria = categoria;
     }
 cargarDatos (){
-    console.log(`Tu tarjeta es ${this.tipo} emitida por ${this.bancoEmisor}`);
+    console.log(`Tu tarjeta es ${this.tipo} emitida por ${this.bancoEmisor} del segmento ${this.categoria}`);
 }
 }
 const tarjeta1 = new Tarjeta ("VISA", "ICBC", "BLACK");
-const tarjeta2 = new Tarjeta ("MASTERCARD", "BANCO DE CORDOBA", "GOLD")
-const tarjeta3 = new Tarjeta ("NARANJA", "NARANJA X", "ORO")
-const tarjeta4 = new Tarjeta ("AMERICAN EXPRESS", "SANTANDER", "PLATINUM")
-const tarjeta5 = new Tarjeta ("CABAL","ROELA", "PLATA")
+const tarjeta2 = new Tarjeta ("MASTERCARD", "SANTANDER", "WOMAN")
+const tarjeta3 = new Tarjeta ("NARANJA", "NARANJA", "GOLD")
+const tarjeta4 = new Tarjeta ("AMERICAN EXPRESS", "CITY", "PLATINUM")
+const tarjeta5 = new Tarjeta ("CABAL", "SUPERVIELLE", "BASIC")
 
 tarjeta1.cargarDatos();
 tarjeta2.cargarDatos();
@@ -70,16 +70,16 @@ const formasDePago = [tarjeta1,tarjeta2,tarjeta3,tarjeta4,tarjeta5]
 console.log (formasDePago)
 
 function nuevaTarjeta(){
-    let tarjetaIngresada = prompt ("Ingrese tipo de tarjeta");
-    let bancoIngresado = prompt ("Banco emisor de su tarjeta");
-    let categoriaIngresada = prompt ("Segmentacion o clasificacion de su tarjeta, ej black, platinum, oro, etc");
-    let tarjetaCreada = new Tarjeta(tarjetaIngresada, bancoIngresado, categoriaIngresada)
-    console.log(tarjetaCreada);
-    formasDePago.push(tarjetaCreada)
+    let tarjetaIngresada = prompt ("Ingrese tipo de tarjeta ");
+    let bancoIngresado = prompt ("Banco emisor de su tarjeta ");
+    let categoriaIngresada = prompt (" Segmentacion o clasificacion de su tarjeta, ej black, platinum, oro, etc")
+    let tarjetaCreada = new Tarjeta( tarjetaIngresada, bancoIngresado, categoriaIngresada)
+    formasDePago.push (tarjetaCreada);
 }
+
 nuevaTarjeta()
 
+for(let elem of formasDePago){
+    console.log(elem.tipo + " " + elem.bancoEmisor + " " + elem.categoria)
 
-for (let elem of formasDePago){
-    console.log(elem.tipo);
 }
