@@ -2,13 +2,13 @@
 let InflacionMensual = 5;
 let plazoFijo = 0.45;
 
-alert("CONVIENE COMPRAR DE CONTADO O FINANCIADO? VAMOS A VER...")
+/* alert("CONVIENE COMPRAR DE CONTADO O FINANCIADO? VAMOS A VER...") */
 
 //DATOS QUE INGRESA EL USUARIO
 
-let valorContado = parseInt(prompt("Ingrese el precio abonando de contado"));
-let valorFinanciado = parseInt(prompt("Ingrese el precio final financiado abonando con tarjeta (valor cuota por cantidad de meses)"));
-let cantidadDeCuotas = parseInt(prompt("Ingrese la cantidad de cuotas"));
+let valorContado = parseFloat(document.getElementById ("PrecioContado").value);
+let valorFinanciado = parseFloat(document.getElementById ("PrecioFinanciado").value);
+let cantidadDeCuotas = parseFloat(document.getElementById ("CantCuotas").value);
 
 function operacionConveniente() {
     let diferenciaMedio = valorFinanciado - valorContado; //calcula diferencia total de monto financiado y contado
@@ -26,9 +26,9 @@ function operacionConveniente() {
     }
 }
 
-
-alert("Calculando........");
-operacionConveniente();
+let calcular = document.getElementById("Calcular")
+/* alert("Calculando........"); */
+/* operacionConveniente(); */
 
 
 function inversion (){

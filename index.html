@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <title>InflaciOFF</title>
 </head>
 <body>
@@ -13,13 +15,79 @@
         </h1>
     </header>
     <nav>
-        
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Inicio</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Categorias</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Promociones</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contacto</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled">Terminos</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
     </nav>
     <main>
         <h2>Realiza el calculo!!!</h2>
+        <div class="Tarjetas">
+            <div class="card" style="width: 18rem;">
+                <img src="./visa-logo-1.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Visa</h5>
+                  <p class="card-text">Seleccione banco emisor.</p>
+                  <a href="#" class="btn btn-primary">Ver Bancos</a>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img src="./Mastercard-logo.svg.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">MasterCard</h5>
+                  <p class="card-text">Seleccione banco emisor.</p>
+                  <a href="#" class="btn btn-primary">Ver Bancos</a>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img src="./tarjeta-naranja.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Naranja</h5>
+                  <p class="card-text">Seleccione banco emisor.</p>
+                  <a href="#" class="btn btn-primary">Ver Bancos</a>
+                </div>
+              </div>
+        </div>
+        <h2>
+            CALCULOS
+        </h2>
+
         <P>Bienvenidos al portal del compra inteligente. Aca podras calcular como te conviene abonar tus compras, con efectivo? con tarjeta de credito???
         </P>
+
         <p>En nuestra economia tan volatil, es fundamental estar organizados con los gastos, y considerar todas las opciones para que nuestro dinero rinda mas y mejor.</p>
+        <div class="row">
+            <div class="col">
+              <input type="number" id="PrecioContado" placeholder="Precio de contado" aria-label="Precio de contado">
+            </div>
+            <div class="col">
+              <input type="number" id="PrecioFinanciado" placeholder="Precio total financiado" aria-label="Precio total financiado">
+            </div>
+            <div class="col">
+                <input type="number" id="CantCuotas" placeholder="Cantidad de cuotas" aria-label="Cantidad de cuotas">
+              </div>
+              <button type="submit" id="Calcular" onclick="operacionConveniente ()">Calcular</button>
+          </div>
     </main>
     <footer>
 
