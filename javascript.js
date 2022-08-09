@@ -6,11 +6,12 @@ let plazoFijo = 0.45;
 
 //DATOS QUE INGRESA EL USUARIO
 
-let valorContado = parseFloat(document.getElementById ("PrecioContado").value);
-let valorFinanciado = parseFloat(document.getElementById ("PrecioFinanciado").value);
-let cantidadDeCuotas = parseFloat(document.getElementById ("CantCuotas").value);
+
 
 function operacionConveniente() {
+    let valorContado = document.getElementById("PrecioContado").value;
+    let valorFinanciado = document.getElementById("PrecioFinanciado").value;
+    let cantidadDeCuotas = document.getElementById("CantCuotas").value;
     let diferenciaMedio = valorFinanciado - valorContado; //calcula diferencia total de monto financiado y contado
     let diferenciaPorcentaje = (diferenciaMedio / valorContado)*100; //
     let diferenciaMensual = (diferenciaPorcentaje / cantidadDeCuotas);
@@ -21,14 +22,15 @@ function operacionConveniente() {
         alert(`Si lo invertis en Plazo fijo por ejemplo..` )
         inversion()
 
-    }   else{
-        alert("USA EL EFECTIVO, TE MATAN CON EL INTERES")
+    }   
+    else{
+        alert("Es conveniente abonar en efectivo, el interes es muy elevado")
     }
 }
 
-let calcular = document.getElementById("Calcular")
+
 /* alert("Calculando........"); */
-/* operacionConveniente(); */
+/* operacionConveniente();  */
 
 
 function inversion (){
@@ -77,7 +79,7 @@ function nuevaTarjeta(){
     formasDePago.push (tarjetaCreada);
 }
 
-nuevaTarjeta()
+/* nuevaTarjeta() */
 
 for(let elem of formasDePago){
     console.log(elem.tipo + " " + elem.bancoEmisor + " " + elem.categoria)

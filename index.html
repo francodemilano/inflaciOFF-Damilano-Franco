@@ -78,15 +78,15 @@
         <p>En nuestra economia tan volatil, es fundamental estar organizados con los gastos, y considerar todas las opciones para que nuestro dinero rinda mas y mejor.</p>
         <div class="row">
             <div class="col">
-              <input type="number" id="PrecioContado" placeholder="Precio de contado" aria-label="Precio de contado">
+              <input type="number" id="PrecioContado" placeholder="Precio de contado" aria-label="Precio de contado" required>
             </div>
             <div class="col">
-              <input type="number" id="PrecioFinanciado" placeholder="Precio total financiado" aria-label="Precio total financiado">
+              <input type="number" id="PrecioFinanciado" placeholder="Precio total financiado" aria-label="Precio total financiado" required>
             </div>
             <div class="col">
-                <input type="number" id="CantCuotas" placeholder="Cantidad de cuotas" aria-label="Cantidad de cuotas">
+                <input type="number" id="CantCuotas" placeholder="Cantidad de cuotas" aria-label="Cantidad de cuotas" required>
               </div>
-              <button type="submit" id="Calcular" onclick="operacionConveniente ()">Calcular</button>
+              <button type="submit" id="Calcular" onclick= "operacionConveniente()" >Calcular</button>
           </div>
     </main>
     <footer>
