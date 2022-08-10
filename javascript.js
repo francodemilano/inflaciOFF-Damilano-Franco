@@ -71,17 +71,23 @@ tarjeta5.cargarDatos();
 const formasDePago = [tarjeta1,tarjeta2,tarjeta3,tarjeta4,tarjeta5]
 console.log (formasDePago)
 
+
+let newTarjetaCredito = document.getElementById("botonNuevo")
+newTarjetaCredito.addEventListener("click", ()=>{alert("Nunca pediremos numeros de tarjeta, solo tipo y banco")})
+
+
 function nuevaTarjeta(){
-    let tarjetaIngresada = prompt ("Ingrese tipo de tarjeta ");
-    let bancoIngresado = prompt ("Banco emisor de su tarjeta ");
-    let categoriaIngresada = prompt (" Segmentacion o clasificacion de su tarjeta, ej black, platinum, oro, etc")
+    let tarjetaIngresada = document.getElementById("tipoInput").value;
+    let bancoIngresado = document.getElementById("bancoInput").value;
+    let categoriaIngresada = document.getElementById("categoriaInput").value;
     let tarjetaCreada = new Tarjeta( tarjetaIngresada, bancoIngresado, categoriaIngresada)
     formasDePago.push (tarjetaCreada);
 }
 
-/* nuevaTarjeta() */
+
 
 for(let elem of formasDePago){
     console.log(elem.tipo + " " + elem.bancoEmisor + " " + elem.categoria)
 
 }
+
