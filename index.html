@@ -41,38 +41,37 @@
           </nav>
     </nav>
     <main>
-        <h2>Realiza el calculo!!!</h2>
+      <h2>Realiza el calculo!!!</h2>
         <div class="Tarjetas">
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 20rem;">
                 <img src="./visa-logo-1.png" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">Visa</h5>
-                  <p class="card-text">Seleccione banco emisor.</p>
-                  <a href="#" class="btn btn-primary">Ver Bancos</a>
+                  <h5 class="card-title">Visa<h5>            <select id="Formulario" class="form-select" aria-label="Default select example">
+                  <option selected>Banco Emisor</option>
+                  </select>
+                  <button id="botonBanco" type="button">Seleccionar</button>
                 </div>
-              </div>
-              <div class="card" style="width: 18rem;">
+            </div>
+
+              <div class="card" style="width: 20rem;">
                 <img src="./Mastercard-logo.svg.png" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">MasterCard</h5>
-                  <p class="card-text">Seleccione banco emisor.</p>
-                  <a href="#" class="btn btn-primary">Ver Bancos</a>
+                  <select id="FormularioMaster" class="form-select" aria-label="Default select example">
+                  <option selected>Banco Emisor</option>
+                  </select>
+                  <button class="botonBanco" type="button">Seleccionar</button>
                 </div>
               </div>
-              <div class="card" style="width: 18rem;">
-                <img src="./tarjeta-naranja.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Naranja</h5>
-                  <p class="card-text">Seleccione banco emisor.</p>
-                  <a href="#" class="btn btn-primary">Ver Bancos</a>
-                </div>
-              </div>
+
+              
         </div>
 <h2>INGRESA UNA NUEVA TARJETA</h2>
 
     <div>
       <button id="botonNuevo" type="button" class="btn btn-danger">Ingresa nueva tarjeta</button>
   </div>
+
         <h2>
             CALCULOS
         </h2>
@@ -99,7 +98,7 @@
     </footer>
     
 
-    
+
     <script src="./javascript.js"></script>
 </body>
 </html>
