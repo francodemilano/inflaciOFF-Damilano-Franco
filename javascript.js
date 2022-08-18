@@ -64,6 +64,15 @@ function Elegir_Bancos_Master(){
         } 
     Elegir_Bancos_Master()
 
+let TarjetaBancariaVisa = document.getElementById("botonBanco")
+    TarjetaBancariaVisa.addEventListener("click", 
+    
+    ()=>{alert(`Tu tarjeta es ${Formulario.value}`)})
+let TarjetaBancariaMaster = document.getElementById("botonBancoMaster")
+    TarjetaBancariaMaster.addEventListener("click", 
+    
+    ()=>{alert(`Tu tarjeta es ${FormularioMaster.value}`)})
+
 
 
 /* FUNCION CALCULO DIF PAGO DE CONTADO Y FINANCIADO */
