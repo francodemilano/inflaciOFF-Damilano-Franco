@@ -73,7 +73,7 @@ let TarjetaBancariaMaster = document.getElementById("botonBancoMaster")
     
     ()=>{alert(`Tu tarjeta es ${FormularioMaster.value}`)})
 
-
+    localStorage.setItem("tarjeta", "TarjetaBancariaVisa");
 
 /* FUNCION CALCULO DIF PAGO DE CONTADO Y FINANCIADO */
 function operacionConveniente() {
@@ -84,16 +84,17 @@ function operacionConveniente() {
     let diferenciaPorcentaje = (diferenciaMedio / valorContado)*100; //
     let diferenciaMensual = (diferenciaPorcentaje / cantidadDeCuotas);
 
-    if (diferenciaMensual <= InflacionMensual){
-        alert("TE CONVIENE COMPRAR EN CUOTAS, INVERTI EL EFECTIVO DE MANERA EFICIENTE!");
-        alert("Si invertis el efectivo en Plazo fijo por ejemplo.." );
-        inversion();
+    diferenciaMensual <= InflacionMensual ?
+        (alert("TE CONVIENE COMPRAR EN CUOTAS, INVERTI EL EFECTIVO DE MANERA EFICIENTE!"),
+        alert("Si invertis el efectivo en Plazo fijo por ejemplo.." ),
+        inversion())
 
-    }   
-    else{
+            :
         alert("TE CONVIENE PAGAR EN EFECTIVO, EL INTERES ES MAYOR A LA INFLACION")
-    }
+        
+     
 }
+
 function inversion (){
     let valorContado = document.getElementById("PrecioContado").value;
     let cantidadDeCuotas = document.getElementById("CantCuotas").value;
