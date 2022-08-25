@@ -90,7 +90,12 @@ function operacionConveniente() {
         inversion())
 
             :
-        alert("TE CONVIENE PAGAR EN EFECTIVO, EL INTERES ES MAYOR A LA INFLACION")
+        Swal.fire({
+                title: 'Compra en efectivo!',
+                text: 'El interés es muy alto',
+                icon: 'error',
+                confirmButtonText: 'Bien!'
+        })
         
      
 }
