@@ -1,3 +1,5 @@
+fetch('https://api.estadisticasbcra.com/usd_of')
+    .then ((resp)=> console.log(resp))
 //DATO SIN INTERACCION DEL USUSARIO
 let InflacionMensual = 7;
 let plazoFijo = 0.6;
@@ -90,7 +92,12 @@ function operacionConveniente() {
         inversion())
 
             :
-        alert("TE CONVIENE PAGAR EN EFECTIVO, EL INTERES ES MAYOR A LA INFLACION")
+        Swal.fire({
+                title: 'Compra en efectivo!',
+                text: 'El interés es muy alto',
+                icon: 'error',
+                confirmButtonText: 'Bien!'
+        })
         
      
 }
@@ -160,8 +167,5 @@ for(let elem of formasDePago){
     console.log(elem.tipo + " " + elem.bancoEmisor + " " + elem.categoria)
 
 } 
-
-
-
 
 
