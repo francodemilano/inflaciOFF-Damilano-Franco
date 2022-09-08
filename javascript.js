@@ -1,5 +1,4 @@
-fetch('https://api.estadisticasbcra.com/usd_of')
-    .then ((resp)=> console.log(resp))
+
 //DATO SIN INTERACCION DEL USUSARIO
 let InflacionMensual = 7;
 let plazoFijo = 0.6;
@@ -169,3 +168,10 @@ for(let elem of formasDePago){
 } 
 
 
+//para hacer q algo aparezca y se borre
+// let divLoader = document.getElementById("loader")
+
+// const loading = setTimeout (()=>{
+    //divLoader.remove()    sirve para q desaparezca el cargando productos
+    //mostrarCatalogo(estanteria)  funcion q llama al array para mostrarlo
+    //},2000) 2000 serian 2 segundos
