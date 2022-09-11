@@ -3,7 +3,7 @@
         "id": 1,
         "Nombre": "ICBC",
         "Categoria": "Banco",
-        "Combustible": "Sin promociones vigentes",
+        "Promociones": "Promociones vigentes",
         "Supermercado": "1° y 3° jueves del mes 25% en COTO, DISCO, VEA y JUMBO",
         "imagen": "Accesorios/ICBC_logo.png"
     },
@@ -11,7 +11,7 @@
         "id": 2,
         "Nombre": "Banco de Cordoba",
         "Categoria": "Banco",
-        "Combustible":  "Sin promociones vigentes",
+        "Promociones": "Promociones vigentes",
         "Supermercado": "4 cuotas sin interes en LIBERTAD, DISCO, VEA y SUPERMAMI",
         "imagen": "Accesorios/bancor logo.png"
     },
@@ -20,7 +20,7 @@
         "id": 3,
         "Nombre": "Macro",
         "Categoria": "Banco",
-        "Combustible": "Dia viernes 10%",
+        "Promociones": "Promociones vigentes",
         "Supermercado": "Miercoles 25% en CARREFOUR Y CHANGOMAS",
         "imagen": "Accesorios/Logo_Banco_Macro.png"
     },
@@ -28,7 +28,7 @@
         "id": 4,
         "Nombre": "Galicia",
         "Categoria": "Banco",
-        "Combustible": "Sin promociones vigentes",
+        "Promociones": "Promociones vigentes",
         "Supermercado": "Viernes 25% en CORDIEZ y VEA",
         "imagen": "Accesorios/Logo_Banco_Galicia.png"
     },
@@ -36,7 +36,7 @@
         "id": 5,
         "Nombre": "MODO",
         "Categoria": "APP",
-        "Combustible": "Lunes 15% en PUMA. Jueves 15% en GULF",
+        "Promociones": "Promociones vigentes",
         "Supermercado": "Todos los dias 25% en SuperMami, Tadicor, Cordiez. Jueves 25% en Disco, Vea, Jumbo",
         "imagen": "Accesorios/modo.png"
     },
@@ -44,7 +44,7 @@
         "id": 6,
         "Nombre": "Mercado Pago",
         "Categoria": "APP",
-        "Combustible": "Sin promociones vigentes",
+        "Promociones": "Promociones vigentes",
         "Supermercado": "Todos los dias 15% en Libertad y Carrefour",
         "imagen": "Accesorios/mercadopago.png"
     }]

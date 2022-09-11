@@ -5,9 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <!--BS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"> 
+    <!--Sweet Alert-->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--Toastify-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
 
     <title>InflaciOFF</title>
 </head>
@@ -44,35 +49,16 @@
           </nav>
     </nav>
     <main>
-      <h2>Realiza el calculo!!!</h2>
-        <div class="Tarjetas">
-            <div class="card" style="width: 20rem;">
-                <img src="./Accesorios/visa-logo-1.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Visa<h5>            <select id="Formulario" class="form-select" aria-label="Default select example">
-                  <option selected>Banco Emisor</option>
-                  </select>
-                  <button id="botonBanco" type="button">Seleccionar</button>
-                </div>
-            </div>
+      <h3 class="text-center m-4 text-bg-success">Promociones Bancarias</h3>
+      <div id="loader"class="loader">Cargando promos...</div> 
+      <div id="productos" class="productosEstilos">
 
-              <div class="card" style="width: 20rem;">
-                <img src="./Accesorios/Mastercard.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">MasterCard</h5>
-                  <select id="FormularioMaster" class="form-select" aria-label="Default select example">
-                  <option selected>Banco Emisor</option>
-                  </select>
-                  <button id="botonBancoMaster" type="button">Seleccionar</button>
-                </div>
-              </div>
+      </div>
 
-              
-        </div>
 <h2>INGRESA UNA NUEVA TARJETA</h2>
 
     <div>
-      <button id="botonNuevo" type="button" class="btn btn-danger">Ingresa nueva tarjeta</button>
+      <button id="agregarBtn" type="button" class="btn btn-danger">Ingresa nueva tarjeta</button>
   </div>
 
         <h2>
@@ -99,9 +85,16 @@
     <footer>
 
     </footer>
+          <!--BS-->
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script> 
+          <!--Toastify-->
+          <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+          <!--Luxon-->
+          <!-- <script src="luxon.js"></script> -->
+          <script src="https://cdn.jsdelivr.net/npm/luxon@2.3.0/build/global/luxon.min.js"></script>
+
+    <script src="./class.js"></script>
+    <script src="./main.js"></script>
     
-
-
-    <script src="./javascript.js"></script>
 </body>
 </html>
