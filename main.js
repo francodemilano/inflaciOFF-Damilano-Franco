@@ -1,11 +1,9 @@
 //Array productos en carrito operador OR -- Optimización
-let productosEnCarrito = JSON.parse(localStorage.getItem("carrito")) || []
+let productosEnPromo = JSON.parse(localStorage.getItem("promos")) || []
 
 //Elementos DOM 
-let acumulador
+
 let divProductos = document.getElementById("productos")
-let inputBuscar = document.getElementById("buscador") 
-let btnBuscar = document.getElementById("btnBuscar")
 let divLoader = document.getElementById("loader")
 
 //Funciones 
@@ -16,22 +14,42 @@ function mostrarPromociones(array){
         nuevoProducto.innerHTML = `<div id="${promo.id}" class="card" style="width: 18rem;">
                                         <img class="card-img-top alturaCardFotos" src="${promo.imagen}" alt="${promo.Promociones} de ${promo.Nombre}">
                                         <div class="card-body">
+                                            <h4 class="card-main">${promo.Nombre}</h4>
                                             <h5 class="card-title">${promo.Promociones}</h5>
-                                            <p Precio: ${promo.Supermercado}</p>
-                                            <button id="agregarBtn${promo.id}" class="btn btn-outline-success">Combustible</button>
-                                            <button id="agregarBtn${promo.id}" class="btn btn-outline-success">Supermercado</button>
+
+                                            <button id="agregarBtnSuper${promo.id}" class="btn btn-outline-success">Super</button>
+                                            <button id="agregarBtnCombustible${promo.id}" class="btn btn-outline-success">Combustible</button>
+                                            
                                         </div>
                                     </div>`
         divProductos.appendChild(nuevoProducto)
         //código btnAgregar
-        let btnAgregar = document.getElementById(`agregarBtn${promo.id}`)
-        //invocar agregarAlCarrito
-        btnAgregar.addEventListener("click", () =>{
-            agregarAlCarrito(promo)
+        let btnAgregarsuper = document.getElementById(`agregarBtnSuper${promo.id}`)
+        let btnAgregarCombustible = document.getElementById(`agregarBtnCombustible${promo.id}`)
+        //Cargar las promociones
+        btnAgregarsuper.addEventListener("click", () =>{
+            MostrarPromoSuper(promo)
             
+        })
+        btnAgregarCombustible.addEventListener("click", () => {
+            MostrarPromoCombustible (promo)
         })
         })
     }
+    
+function MostrarPromoSuper(promo){
+    console.log(promo);
+    Swal.fire({
+        title: `Promocion de ${promo.Nombre}`,
+        text:  `El libro ${promo.Supermercado} ha sido agregado`,
+        icon: 'success',
+        confirmButtonText: 'Bien!'
+
+
+})
+
+
+}
 
     //Código
 const loading = setTimeout(()=>{
@@ -63,8 +81,9 @@ function operacionConveniente() {
     let diferenciaMensual = (diferenciaPorcentaje / cantidadDeCuotas);
  
     diferenciaMensual <= InflacionMensual ?
-    (swal.fire ( " Te conviene comprar con tarjeta! " , " Mirá las promos vigentes " , " Éxito " ),
-    inversion())
+        (alert("TE CONVIENE COMPRAR EN CUOTAS, INVERTI EL EFECTIVO DE MANERA EFICIENTE!"),
+        alert("Si invertis el efectivo en Plazo fijo por ejemplo.." ),
+        inversion())
  
             :
         Swal.fire({
