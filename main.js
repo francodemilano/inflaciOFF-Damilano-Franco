@@ -1,7 +1,6 @@
-//Array productos en carrito operador OR -- Optimización
 let productosEnPromo = JSON.parse(localStorage.getItem("promos")) || []
 
-//Elementos DOM 
+// DOM 
 
 let divProductos = document.getElementById("productos")
 let divLoader = document.getElementById("loader")
@@ -31,45 +30,37 @@ function mostrarPromociones(array){
             MostrarPromoSuper(promo)
             
         })
-        btnAgregarCombustible.addEventListener("click", () => {
-            MostrarPromoCombustible (promo)
+        btnAgregarCombustible.addEventListener("click", () =>{
+            MostrarPromoCombustible(promo)
         })
         })
     }
     
 function MostrarPromoSuper(promo){
-    console.log(promo);
-    Swal.fire({
-        title: `Promocion de ${promo.Nombre}`,
-        text:  `El libro ${promo.Supermercado} ha sido agregado`,
+       Swal.fire({
+        title: `EN SUPERMERCADOS`,
+        text:  `${promo.Supermercado} `,
         icon: 'success',
         confirmButtonText: 'Bien!'
+        
+}
+)
 
-
-})
 
 
 }
 
-    //Código
-const loading = setTimeout(()=>{
-    //chau divLoader
-    divLoader.remove()
-    //llamar tarjetas
-    mostrarPromociones(PromocionesBancarias)
-},2000)
+function MostrarPromoCombustible(promo){
+   
+     Swal.fire({
+         title: `EN ESTACIONES DE SERVICIO`,
+         text: `${promo.Combustible}`,
+         icon: 'success',
+         confirmButtonText: 'Bien!'
+         
+     })
+ }
 
-//DATO SIN INTERACCION DEL USUSARIO
-let InflacionMensual = 7;
-let plazoFijo = 0.6;
-function inversion (){
-    let valorContado = document.getElementById("PrecioContado").value;
-    let cantidadDeCuotas = document.getElementById("CantCuotas").value;
-    let gananciaInvertida = ((valorContado * plazoFijo) / cantidadDeCuotas);
-    alert(`Ahorraste $ ${gananciaInvertida}  por mes`);
-    let gananciaTotal = gananciaInvertida * cantidadDeCuotas
-    alert (`o bien $ ${gananciaTotal} en los ${cantidadDeCuotas} meses de la financiacion`)
-}
 
 
 function operacionConveniente() {
@@ -81,9 +72,13 @@ function operacionConveniente() {
     let diferenciaMensual = (diferenciaPorcentaje / cantidadDeCuotas);
  
     diferenciaMensual <= InflacionMensual ?
-        (alert("TE CONVIENE COMPRAR EN CUOTAS, INVERTI EL EFECTIVO DE MANERA EFICIENTE!"),
-        alert("Si invertis el efectivo en Plazo fijo por ejemplo.." ),
-        inversion())
+
+        swal.fire({
+            title: 'Te conviene comprar en cuotas!!',
+            Text: 'Guarda el efectivo e invertilo de manera eficiente',
+            icon: 'success',
+            confirmButtonText: 'Bien!'
+        })
  
             :
         Swal.fire({
@@ -93,3 +88,22 @@ function operacionConveniente() {
                 confirmButtonText: 'Bien!'
         })
     }
+/*     function inversion (){
+        let valorContado = document.getElementById("PrecioContado").value;
+        let cantidadDeCuotas = document.getElementById("CantCuotas").value;
+        let gananciaInvertida = ((valorContado * plazoFijo) / cantidadDeCuotas);
+        alert(`Ahorraste $ ${gananciaInvertida}  por mes`);
+        let gananciaTotal = gananciaInvertida * cantidadDeCuotas
+        alert (`o bien $ ${gananciaTotal} en los ${cantidadDeCuotas} meses de la financiacion`)
+    } */
+        //Código
+const loading = setTimeout(()=>{
+    
+    divLoader.remove()
+   
+    mostrarPromociones(PromocionesBancarias)
+},2000)
+
+//DATO SIN INTERACCION DEL USUSARIO
+let InflacionMensual = 7;
+let plazoFijo = 0.6;
