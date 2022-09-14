@@ -4,33 +4,19 @@
     box-sizing: border-box;
 }
 body {
-    color:black;
-    background-color: antiquewhite;
+    color:rgb(0, 0, 0);
+    background-color: rgb(255, 252, 86);
 }
 
-
+#banner{
+    background-color: rgb(255, 255, 125);
+}
 .productosEstilos{
     display: grid;
     grid-template-columns: repeat(3,1fr)
 }
-.inputBorder{
-    border: solid,black,1px
-    
-}
-input[type=text] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 3px solid #ccc;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-    outline: none;
-  }
-  
-  input[type=text]:focus {
-    border: 3px solid #555;
-  }
+
+
 
 /* Loader */
 
@@ -47,7 +33,7 @@ input[type=text] {
     border: 1px solid black;
     border-radius: 10%;
     text-align: center;
-    background-color: white;
+    background-color: rgb(152, 240, 101);
     max-height: 300px;
 }
 .card h3{
@@ -66,32 +52,15 @@ input[type=text] {
     width: 100%;
     height: 150px;
 }
-.content{
-    padding: 1rem;
-    font-size: 1rem;
-
+.row{
+    height: auto;
+    width: 1300px;
+    margin: 1px;
+    border-radius: 2%;
+    background-color: rgb(252, 253, 175);
 }
-.content button{
-    padding: 0.5rem;
-    text-decoration: none;
-    color: gray;
-    border: 1px black solid;
-    border-radius: 20%;
-    color: white;
-    background-color: black;
-
-    font-size: 1.25rem;
-
-}
-.content p{
-    padding: 0.25rem;
-}
-.content button:hover{
-    color:rgb(52, 34, 156);
-    height: 200%;
+#calcular{
+    border: 5%;
+    border-color: black;
     
-}
-.autorCard{
-    font-size: 2rem;
-    height: 80px;
 }
